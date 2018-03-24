@@ -1,0 +1,24 @@
+<document>
+    <stackTemplate theme="dark" class="darkBackgroundColor">
+        <banner>
+            <title>Živé vysílání</title>
+        </banner>
+        <collectionList>
+            <grid>
+                <section>
+                    {{#each channels }}
+                                <lockup data-href-page="play" data-href-page-options="{{toJSON this.live.programme }}">
+                                    <img class="darkImage" src="{{live.programme.imageURL}}" style="width:544; height:306;"/>
+                                    <overlay>
+                                        <badge src="{{{asset_url channelLogo}}}" style="width:90; height:54; tv-position: top; background:rgba(0,0,0,0.2)" />
+                                        <title class="showAndScrollTextOnHighlight">{{ live.programme.title }}</title>
+                                        <!-- <text class="overlayTextLayout">{{live.programme.channelTitle}}</text> -->
+                                        <progressBar value="0.{{live.programme.elapsedPercentage}}" style="tv-tint-color2x: black; tv-tint-color: {{tintColor}}"/>
+                                    </overlay>
+                                </lockup>
+                    {{/each}}
+                </section>
+            </grid>
+        </collectionList>
+    </stackTemplate>
+</document>

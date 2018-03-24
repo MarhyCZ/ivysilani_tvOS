@@ -1,0 +1,77 @@
+<document>
+    <stackTemplate theme="dark" class="darkBackgroundColor">
+        <banner>
+            <title>iVysílání</title>
+        </banner>
+        <collectionList>
+            <carousel>
+                <section>
+                    {{#each tipsMain }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img src="{{ imageURL }}" class="darkImage" style="width:640; height:360;" />
+                            <overlay>
+                                <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                                <text class="overlayTextLayout"><ratingBadge value="{{ratingPercentage}}"></ratingBadge></text>
+                            </overlay>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </carousel>
+            <shelf>
+                <header><title>Nejsledovanější videa dne</title></header>
+                <section>
+                    {{#each tipsToday }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img class="tile" src="{{ imageURL }}"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+            <shelf>
+                <header><title>Nejsledovanější videa týdne</title></header>
+                <section>
+                    {{#each tipsWeek }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img class="tile" src="{{ imageURL }}"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+            <shelf>
+                <header><title>Nepřehlédněte</title></header>
+                <section>
+                    {{#each tipsNote }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img class="tile" src="{{ imageURL }}"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+            <shelf>
+                <header><title>Z našeho archivu</title></header>
+                <section>
+                    {{#each tipsArchive }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img class="tile" src="{{ imageURL }}"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+            <shelf>
+                <section>
+                    <header><title>Pořady podle abecedy</title></header>
+                    {{#each letters }}
+                        <lockup data-href-page="alphabet-letter" data-href-page-options="{{toJSON this }}">
+                            <img src="{{{asset_url poster_path}}}" style="width:100; height:100;"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+        </collectionList>
+    </stackTemplate>
+</document>

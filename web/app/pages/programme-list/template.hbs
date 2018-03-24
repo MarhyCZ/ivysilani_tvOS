@@ -1,0 +1,41 @@
+<document>
+    <listTemplate theme="dark" class="darkBackgroundColor">
+        <background>
+            <heroImg src="{{showInfo.imageURL}}"/>
+        </background>
+        <banner>
+            <title>{{ showInfo.title }}</title>
+        </banner>
+        <list>
+            <header>
+                <title>Epizody</title>
+            </header>
+            <section>
+                {{#each episodes }}
+                    <listItemLockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                        <title>{{ title }}</title>
+                        <relatedContent>
+                            <lockup>
+                                <img src="{{ imageURL }}"/>
+                                <title>{{ title }}</title>
+                                <description>{{ synopsis }}</description>
+                            </lockup>
+                        </relatedContent>
+                    </listItemLockup>
+                {{/each}}
+                {{#if paging }}
+                    <listItemLockup data-href-page="programme-list" data-href-page-options="{{ toJSON this }}">
+                        <title>Další</title>
+                        <relatedContent>
+                            <lockup>
+                                <img src=""/>
+                                <title>Další</title>
+                                <description></description>
+                            </lockup>
+                        </relatedContent>
+                    </listItemLockup>
+                {{/if}}
+            </section>
+        </list>
+    </listTemplate>
+</document>

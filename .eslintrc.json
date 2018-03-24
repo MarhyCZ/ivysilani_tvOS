@@ -1,0 +1,10 @@
+{
+    "extends": "standard",
+    "globals": {
+        "XMLHttpRequest": true,
+        "MediaItem": true,
+        "Playlist": true,
+        "Player": true,
+        "navigationDocument": true
+  }
+}

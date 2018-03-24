@@ -1,0 +1,19 @@
+<document>
+   <stackTemplate theme="dark" class="darkBackgroundColor">
+      <banner>
+         <title>Podle abecedy</title>
+      </banner>
+      <collectionList>
+        <grid>
+        <section>
+          {{#each results }}
+          <lockup data-href-page="alphabet-letter" data-href-page-options="{{toJSON this }}">
+            <img src="{{{asset_url poster_path}}}" style="width:150; height:150;"/>
+            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+          </lockup>
+          {{/each}}
+        </section>
+        </grid>
+      </collectionList>
+   </stackTemplate>
+</document>

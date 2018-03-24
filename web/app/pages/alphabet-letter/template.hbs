@@ -1,0 +1,26 @@
+<document>
+    <listTemplate theme="dark" class="darkBackgroundColor">
+        <banner>
+            <title>Podle abecedy - {{ letter.title }}</title>
+        </banner>
+        <list>
+            <header>
+                <title>Pořady</title>
+            </header>
+            <section>
+                {{#each shows }}
+                    <listItemLockup data-href-page="programme-list" data-href-page-options="{{toJSON this}}">
+                        <title>{{ title }}</title>
+                        <relatedContent>
+                            <lockup>
+                                <img src="{{ imageURL }}"/>
+                                <title>{{ title }}</title>
+                                <description>{{ synopsis }}</description>
+                            </lockup>
+                        </relatedContent>
+                    </listItemLockup>
+                {{/each}}
+            </section>
+        </list>
+    </listTemplate>
+</document>

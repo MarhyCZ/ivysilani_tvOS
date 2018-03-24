@@ -1,0 +1,64 @@
+{
+  "name": "appletv-demo",
+  "version": "1.0.0",
+  "description": "A demo application for AppleTV using atvjs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "presentation": "gulp presentation --p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emadalam/appletv-demo.git"
+  },
+  "keywords": [
+    "appletv",
+    "tvml",
+    "app",
+    "tvjs",
+    "atvjs",
+    "appletv",
+    "demo",
+    "tvmlkit"
+  ],
+  "author": "Emad Alam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emadalam/appletv-demo/issues"
+  },
+  "homepage": "https://github.com/emadalam/appletv-demo#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-size": "^3.0.0",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
+    "handlebars-loader": "^1.7.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.2.0",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-stream": "^4.0.2"
+  },
+  "dependencies": {
+    "atvjs": "^0.2.5",
+    "fast-xml-parser": "^3.3.6",
+    "handlebars": "^4.0.11"
+  }
+}

@@ -1,0 +1,19 @@
+<document>
+   <stackTemplate>
+      <banner>
+         <title>Dle žánru</title>
+      </banner>
+      <collectionList>
+        <grid>
+        <section>
+          {{#each results }}
+          <lockup data-href-page="alphabet-letter" data-href-page-options="{{toJSON this }}">
+            <img class="tile_compact" src="{{{asset_url poster_path}}}" style="width:360; height:240;"/>
+            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+          </lockup>
+          {{/each}}
+        </section>
+        </grid>
+      </collectionList>
+   </stackTemplate>
+</document>
