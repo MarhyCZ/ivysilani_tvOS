@@ -13,10 +13,12 @@ const PlayPage = ATV.Page.create({
     playerType = progressive je jako HbbTV. Dava primo video. v tvOS to vyusti, ze prehravac ma thumbnaily na timeline
     je potreba pouzit okhttp User-Agent, jinak to bude playerType ignorovat a pusti to dash
     u progressive je potreba kvalita 'max1080p', ktera vybere konkretni stream, namisto celeho m3u8 playlistu
+    max1080p zajistuje, ze pro videa s rozlisenim mensi nez 1080p, se automaticky vybere mensi kvalita a nedojde k chybe
+
     // Zkontroluj, jestli se jedná o live show a neni to Video on Demand. Tam se bude jednat o string, protoze fastXmlParser konverze.
     // && (options.isVod === "")
 
-    if ('elapsedPercentageX' in options) {
+    if ('elapsedPercentage' in options) {
       let channelName = API.get.liveChannel(options.channelTitle)
       getPlaylistUrl = ATV.Ajax.post(API.url.timeshift, API.xhrOptions(
         {
@@ -28,12 +30,22 @@ const PlayPage = ATV.Page.create({
       ))
     }
 */
-    // Zkontroluj, Jestli se nejedna o live show anebo vysilani, ktere je ale uz i ve forme Video on Demand.
+    // Zkontroluj, Jestli se nejedna o live show a jestli to je vysilani ve forme Video on Demand.
     // || (("elapsedPercentage" in options) && (options.isVod == 1))
+
+    let setQuality
+    let setPlayerType
+    if (options.isVod === '') {
+      setQuality = 'web'
+      setPlayerType = 'ios'
+    } else {
+      setQuality = 'max1080p'
+      setPlayerType = 'progressive'
+    }
     const getPlaylistUrl = ATV.Ajax.post(API.url.playlist, API.xhrOptions({
       ID: options.ID,
-      quality: 'web',
-      playerType: 'ios',
+      quality: setQuality,
+      playerType: setPlayerType,
       playlistType: 'json'
     }))
 
@@ -52,12 +64,10 @@ const PlayPage = ATV.Page.create({
 
         // Iterate and stack up the playlist queue [0].streamUrls.main
         Object.entries(playlist).forEach(([key, value]) => {
-          const streamUrls = API.syncAjax(value.streamUrls.main, { responseType: 'text' })
-          console.log(streamUrls)
-          const lines = streamUrls.split(/\r\n|\r|\n/)
-          console.log(lines)
+          //  const streamUrls = API.syncAjax(value.streamUrls.main, { responseType: 'text' })
+          //  const lines = streamUrls.split(/\r\n|\r|\n/)
 
-          const mediaItem = new MediaItem('video', lines[lines.length - 2])
+          const mediaItem = new MediaItem('video', value.streamUrls.main)
           mediaItem.artworkImageURL = value.previewImageUrl
           mediaItem.title = value.title
           tvosPlaylist.push(mediaItem)
