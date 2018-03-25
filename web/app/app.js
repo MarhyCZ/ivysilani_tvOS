@@ -28,11 +28,14 @@ import PlayPage from 'pages/play'
 ATV.start({
   style: css,
   menu: {
+    attributesTpl: {
+      theme: 'dark'
+    },
     items: [{
       id: 'home',
       name: 'Výběry',
       page: HomePage,
-      attributes: {autoHighlight: true}
+      attributes: {autoHighlight: true, reloadOnSelect: true}
     }, {
       id: 'alphabet',
       name: 'Podle abecedy',
@@ -48,7 +51,8 @@ ATV.start({
     {
       id: 'live',
       name: 'Živé vysílání',
-      page: LivePage
+      page: LivePage,
+      attributes: {reloadOnSelect: true}
     }]
   },
   templates: {
@@ -77,7 +81,7 @@ ATV.start({
     ATV.Navigation.navigateToMenuPage()
   },
   onResume (options) {
-    navigationDocument.clear()
-    ATV.Navigation.navigateToMenuPage()
+    //ATV.Navigation.clear()
+    //ATV.Navigation.navigateToMenuPage()
   }
 })
