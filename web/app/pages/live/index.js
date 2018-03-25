@@ -24,7 +24,11 @@ const LivePage = ATV.Page.create({
         channels.channel2.tintColor = '#f7a400'
         channels.channel2.channelLogo = 'img/channels/ct2.png'
 
-        //  channels.channel5.tintColor = '#ff6400'
+        if ('channel5' in channels) {
+          channels.channel5.tintColor = '#ff6400'
+          channels.channel5.channelLogo = 'img/channels/ctd.png'
+        }
+
         channels.channel6.tintColor = 'gray'
         channels.channel6.channelLogo = 'img/channels/ctart.png'
 
