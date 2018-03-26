@@ -1,7 +1,7 @@
 {
-  "name": "appletv-demo",
+  "name": "ivysilani-tvos",
   "version": "1.0.0",
-  "description": "A demo application for AppleTV using atvjs.",
+  "description": "Neoficiální klient iVysílání pro Apple TV s použitím atvjs",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emadalam/appletv-demo.git"
+    "url": "git+https://github.com/marhycz/ivysilani_tvOS.git"
   },
   "keywords": [
     "appletv",
@@ -18,15 +18,15 @@
     "tvjs",
     "atvjs",
     "appletv",
-    "demo",
-    "tvmlkit"
+    "tvmlkit",
+    "ivysilani"
   ],
-  "author": "Emad Alam",
-  "license": "MIT",
+  "author": "Michal Marhan",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/emadalam/appletv-demo/issues"
+    "url": "https://github.com/marhycz/ivysilani_tvOS/issues"
   },
-  "homepage": "https://github.com/emadalam/appletv-demo#readme",
+  "homepage": "https://github.com/marhycz/ivysilani_tvOS#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
@@ -54,10 +54,10 @@
     "raw-loader": "^0.5.1",
     "webpack": "^4.2.0",
     "webpack-dev-middleware": "^3.0.1",
-    "webpack-stream": "^4.0.2"
+    "webpack-stream": "^4.0.3"
   },
   "dependencies": {
-    "atvjs": "^0.2.5",
+    "atvjs": "^0.2.6",
     "fast-xml-parser": "^3.3.6",
     "handlebars": "^4.0.11"
   }
