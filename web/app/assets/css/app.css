@@ -1,3 +1,15 @@
+.appLogo {
+    width:290; 
+    height:60;
+    tv-align: center;
+}
+
+@media tv-template and (tv-theme:dark) {
+    .appLogo {
+        tv-tint-color: #fff;
+    }
+ }
+
 .scrollTextOnHighlight {
     tv-text-highlight-style: marquee-on-highlight;
 }
