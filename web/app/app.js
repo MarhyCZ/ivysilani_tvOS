@@ -28,9 +28,6 @@ import PlayPage from 'pages/play'
 ATV.start({
   style: css,
   menu: {
-    attributesTpl: {
-      theme: 'dark'
-    },
     items: [{
       id: 'home',
       name: 'Výběry',

@@ -32,6 +32,6 @@
 		<string>arm64</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
-	<dict/>
+	<string>Automatic</string>
 </dict>
 </plist>
