@@ -1,19 +1,14 @@
 //
 //  AppDelegate.swift
-//  ivysilani-app
+//  ivysilani
 //
-
-//  Copyright (c) 2016 eMAD. All rights reserved.
+//  Created by Michal Marhan on 31/03/2018.
+//  Copyright © 2018 Michal Marhan. All rights reserved.
 //
 
 import UIKit
 import TVMLKit
 
-let logFunction : @convention(block) (String) -> Void =
-    {
-        (msg: String) in
-        NSLog("Console: %@", msg)
-}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate {
     
@@ -21,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     var appController: TVApplicationController?
     
     // tvBaseURL points to a server on your local machine. To create a local server for testing purposes, use the following command inside your project folder from the Terminal app: ruby -run -ehttpd . -p9001. See NSAppTransportSecurity for information on using a non-secure server.
-    // static let tvBaseURL = "http://ivysilani.marstad.cz/app/"
-      static let tvBaseURL = "http://localhost:9001/"
+    static let tvBaseURL = "http://ivysilani.marstad.cz/app/"
+    // static let tvBaseURL = "http://localhost:9001/"
     static let tvBootURL = "\(AppDelegate.tvBaseURL)app.js"
     
     // MARK: Javascript Execution Helper
@@ -60,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         }
         
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
-
+        
         return true
     }
     
@@ -104,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     // MARK: TVApplicationControllerDelegate
     
     func appController(_ appController: TVApplicationController, didFinishLaunching options: [String: Any]?) {
-        print("\(#function) invoked with options: \(String(describing: options))")
+        print("\(#function) invoked with options: \(options ?? [:])")
     }
     
     func appController(_ appController: TVApplicationController, didFail error: Error) {
@@ -120,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     }
     
     func appController(_ appController: TVApplicationController, didStop options: [String: Any]?) {
-        print("\(#function) invoked with options: \(String(describing: options))")
+        print("\(#function) invoked with options: \(options ?? [:])")
     }
 }
 
