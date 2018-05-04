@@ -3,13 +3,13 @@ Neoficiální klient iVysílání pro Apple TV umožňující sledování videoo
 
 Problémy hlašte v Issues.
 
-![Domácí obrazovka](img/homescreen.jpg)
-![Živé vysílání](img/livechannels.jpg)
-![Dle abecedy](img/letter.jpg)
-![Epizody](img/episodes.jpg)
-![Info](img/episodeinfo.jpg)
-![Dle data](img/dates.jpg)
-![Přehled dle data](img/date.jpg)
+Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/homescreen.jpg" width="400"><img src="http://marhycz.github.io/ivysilani_tvOS/img/livechannels.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/letter.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/episodes.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/episodeinfo.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/dates.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/date.jpg" width="400">
 
 ### Jak začít s vývojem
 
