@@ -33,3 +33,7 @@ Projekt je rozdělený do 2 částí
 - native: tato složka obsahuje Xcode projekt. Soubor AppDelegate.swift se stará o nastavení TVMLKit frameworku and spuštění JavaScriptové aplikace.
 - web: tato složka obsahuje JavaScript a TVML zdrojové soubory potřebné pro kompilaci aplikace. Obsah složky web/public by měl běžet na webovém serveru, na který bude mít aplikace přístup.
 
+### Jak tedy aplikaci spustit?
+Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV. 
+
+Javascriptovou část aplikace hostuji na webovém serveru http://ivysilani.marstad.cz/app/, tedy při případném updatu aktualizace stačí vypnout/zapnout aplikaci na Apple TV. Později přesunu hostování sem na github.
