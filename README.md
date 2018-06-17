@@ -3,9 +3,17 @@ Neoficiální klient iVysílání pro Apple TV umožňující sledování videoo
 
 Problémy hlašte v Issues.
 
+Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/homescreen.jpg" width="400"><img src="http://marhycz.github.io/ivysilani_tvOS/img/livechannels.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/letter.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/episodes.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/episodeinfo.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/dates.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/date.jpg" width="400">
+
 ### Jak začít s vývojem
 
-Assuming that you have [nodejs](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine, do the following to get started:
+Pokud máte nainstalovnaný [nodejs](https://nodejs.org/) a [npm](https://www.npmjs.com/) stačí následující příkazy ve složce s projektem:
 
 ```shell
 $ npm install -g gulp                   # Install Gulp globally
@@ -13,21 +21,19 @@ $ npm install                           # Install dependencies
 ```
 
 ### Spuštění testovacího webserveru
-Builds the application and starts a webserver. By default the webserver starts at port 9001.
+Zkompiluje .js aplikaci a spustí výchozí webserver na portu 9001. Server hlídá změny a při každém uložení zdrojového souboru znovu překompiluje aplikaci.
 
 ```shell
 $ npm start
 ```
 
-By default, it builds in debug mode and starts the server with live reload.
+### Struktura
+Projekt je rozdělený do 2 částí
 
-* If you need to build otherwise, use `gulp` with additional flags.
-* If you need to build in release mode, add `--t production` flag.
-* You can define a port with `--p 8080` flag. (If you start the server on a different port, make sure to update the same in the native application)
+- native: tato složka obsahuje Xcode projekt. Soubor AppDelegate.swift se stará o nastavení TVMLKit frameworku and spuštění JavaScriptové aplikace.
+- web: tato složka obsahuje JavaScript a TVML zdrojové soubory potřebné pro kompilaci aplikace. Obsah složky web/public by měl běžet na webovém serveru, na který bude mít aplikace přístup.
 
-### Structure
-The project is split into two parts:
+### Jak tedy aplikaci spustit?
+Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV. 
 
-- native: this directory contains the Xcode project and related files. The AppDelegate.swift file handles the setup of the TVMLKit framework and launching the JavaScript context to manage the application.
-- web: this directory contains the JavaScript and TVML template files needed to render the application. The contents of this directory must be hosted on a server accessible from the device.
-
+Javascriptovou část aplikace hostuji na webovém serveru http://ivysilani.marstad.cz/app/, tedy při případném updatu aktualizace stačí vypnout/zapnout aplikaci na Apple TV. Později přesunu hostování sem na github.
