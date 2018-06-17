@@ -32,6 +32,9 @@ const helpers = {
   programmeImg (showId, programmeId) {
     return new Handlebars.SafeString(programmeImage(showId, programmeId))
     // pouzijes to pak jako: {{{programmeImg ID}}}
+  },
+  fullImageURL (imageURL) {
+    return new Handlebars.SafeString('https:' + imageURL)
   }
 }
 

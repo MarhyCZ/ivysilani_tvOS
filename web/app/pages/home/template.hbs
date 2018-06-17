@@ -8,7 +8,7 @@
                 <section>
                     {{#each tipsMain }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                            <img src="{{ imageURL }}" class="darkImage" style="width:768; height:432;" />
+                            <img src="{{ fullImageURL imageURL }}" class="darkImage" style="width:768; height:432;" />
                             <overlay>
                                 <title class="showAndScrollTextOnHighlight">{{ title }}</title>
                                 <text class="overlayTextLayout"><ratingBadge value="{{ratingPercentage}}"></ratingBadge></text>
@@ -22,7 +22,7 @@
                 <section>
                     {{#each tipsToday }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                            <img class="tile" src="{{ imageURL }}"/>
+                            <img class="tile" src="{{ fullImageURL imageURL }}"/>
                             <title class="showAndScrollTextOnHighlight">{{ title }}</title>
                         </lockup>
                     {{/each}}
@@ -33,7 +33,7 @@
                 <section>
                     {{#each tipsWeek }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                            <img class="tile" src="{{ imageURL }}"/>
+                            <img class="tile" src="{{ fullImageURL imageURL }}"/>
                             <title class="showAndScrollTextOnHighlight">{{ title }}</title>
                         </lockup>
                     {{/each}}
@@ -44,7 +44,7 @@
                 <section>
                     {{#each tipsNote }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                            <img class="tile" src="{{ imageURL }}"/>
+                            <img class="tile" src="{{ fullImageURL imageURL }}"/>
                             <title class="showAndScrollTextOnHighlight">{{ title }}</title>
                         </lockup>
                     {{/each}}
@@ -55,7 +55,7 @@
                 <section>
                     {{#each tipsArchive }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                            <img class="tile" src="{{ imageURL }}"/>
+                            <img class="tile" src="{{ fullImageURL imageURL }}"/>
                             <title class="showAndScrollTextOnHighlight">{{ title }}</title>
                         </lockup>
                     {{/each}}

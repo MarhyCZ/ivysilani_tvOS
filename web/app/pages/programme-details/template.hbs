@@ -35,7 +35,7 @@
                     </buttonLockup>
                 </row>
             </stack>
-            <heroImg src="{{ details.imageURL }}" style="margin-left: 0; width: 544;"/>
+            <heroImg src="{{ fullImageURL details.imageURL }}" style="margin-left: 0; width: 544;"/>
         </banner>
         <shelf>
             <header>
@@ -44,7 +44,7 @@
             <section>
                 {{#each related }}
                 <lockup data-href-page="programme-list" data-href-page-options="{{toJSON this }}">
-                    <img src="{{ imageURL }}" width="384" height="216" />
+                    <img src="{{ fullImageURL imageURL }}" width="384" height="216" />
                     <title>{{ title }}</title>
                 </lockup>
                 {{/each}}

@@ -1,7 +1,7 @@
 <document>
     <listTemplate theme="dark">
         <background>
-            <heroImg src="{{showInfo.imageURL}}"/>
+            <heroImg src="{{fullImageURL showInfo.imageURL}}"/>
         </background>
         <banner>
             <title>{{ showInfo.title }}</title>
@@ -16,7 +16,7 @@
                         <title>{{ title }}</title>
                         <relatedContent>
                             <lockup>
-                                <img src="{{ imageURL }}"/>
+                                <img src="{{ fullImageURL imageURL }}"/>
                                 <title>{{ title }}</title>
                                 <description>{{ synopsis }}</description>
                             </lockup>

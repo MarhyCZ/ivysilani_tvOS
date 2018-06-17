@@ -8,7 +8,7 @@ const _ = ATV._ // lodash
 
 const BASE_GET_URL = 'http://ivysilani.marstad.cz/api/'
 const BASE_XML_URL = 'https://www.ceskatelevize.cz'
-const BASE_XML_PROXY = 'http://ivysilani.marstad.cz/xml'
+const BASE_XML_PROXY = 'https://www.ceskatelevize.cz'
 const TOKEN_URL = `${BASE_XML_URL}/services/ivysilani/xml/token/`
 
 const makeParams = params => (params ? `?${Object.keys(params).map(key => ([key, params[key]].map(encodeURIComponent).join('='))).join('&')}` : '')
