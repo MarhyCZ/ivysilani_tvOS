@@ -90,7 +90,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 902CE544206F96EB001B043F /* Build configuration list for PBXProject "ivysilani" */;
+			buildConfigurationList = 902CE544206F96EB001B043F /* Build configuration list for PBXProject "iVysilani" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,7 +246,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBWNLT2RLU;
 				INFOPLIST_FILE = ivysilani/Info.plist;
@@ -266,7 +265,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Launch Image";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBWNLT2RLU;
 				INFOPLIST_FILE = ivysilani/Info.plist;
@@ -285,7 +283,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		902CE544206F96EB001B043F /* Build configuration list for PBXProject "ivysilani" */ = {
+		902CE544206F96EB001B043F /* Build configuration list for PBXProject "iVysilani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				902CE552206F96EE001B043F /* Debug */,
