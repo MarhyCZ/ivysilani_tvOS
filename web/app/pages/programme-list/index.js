@@ -12,16 +12,17 @@ var AlphabetLetterPage = ATV.Page.create({
     // Paging support
     let currentPage
     let showInfo
+    let pageSize = 20
     if ('paging' in options) { currentPage = options.paging.nextPage } else { currentPage = '1' }
     if ('showInfo' in options) { showInfo = options.showInfo } else { showInfo = options }
-    // Dalsi epizody poradu
+    // Když přicestuji z programme-details kliknutim na dalsi epizody
     if ('SIDP' in options) { options.ID = options.SIDP }
 
     let getProgrammeList = ATV.Ajax.post(API.url.programmeList, API.xhrOptions(
       {
         ID: showInfo.ID,
         'paging[episodes][currentPage]': currentPage,
-        'paging[episodes][pageSize]': 20,
+        'paging[episodes][pageSize]': pageSize,
         'type[0]': 'episodes',
         'type[1]': 'related',
         'type[2]': 'bonuses'
@@ -35,12 +36,15 @@ var AlphabetLetterPage = ATV.Page.create({
       .then((xhrs) => {
         let programmeList = fastXmlParser.parse(xhrs[0].response).programmes
         console.log(programmeList)
-        console.log(xhrs[0].response)
+        // console.log(xhrs[0].response)
 
-        // Modifikace pagování
-        if (programmeList.episodes.paging.pagesCount === '1') { delete programmeList.episodes.paging }
-
-        // Je to film nebo seriál?
+        // Modifikace pagování, odstraň paging, pokud se všechno vešlo na 1 stránku
+        if (programmeList.episodes.paging.pagesCount === 1) { delete programmeList.episodes.paging }
+        // U některých pořadů má iVysílání chybu -> ukazuje, že je více stránek,
+        // přitom další už je prázdná
+        if (programmeList.episodes.programme.length < pageSize) { delete programmeList.episodes.paging }
+        // Pokud to není seriál ale film, obal to do pole, kvůli korektnímu zobrazení
+        // Kvuli konverzti XML -> JSON. fastXMLParser hodí jednu epizodu jako child, ne jako pole
         if (!(programmeList.episodes.programme.constructor === Array)) { programmeList.episodes.programme = [programmeList.episodes.programme] }
 
         resolve({
