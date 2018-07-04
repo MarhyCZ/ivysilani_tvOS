@@ -34,7 +34,7 @@ const helpers = {
     // pouzijes to pak jako: {{{programmeImg ID}}}
   },
   fullImageURL (imageURL) {
-    return new Handlebars.SafeString('https:' + imageURL)
+    return new Handlebars.SafeString(imageURL)
   }
 }
 
