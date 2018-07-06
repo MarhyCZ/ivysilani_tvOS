@@ -16,7 +16,7 @@ Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
 
 Javascriptovou část aplikace hostuji zde na githubu v gh-pages branch, tedy při případném updatu postačí vypnout/zapnout aplikaci na Apple TV.
 
-Případně poslat PM na fóru http://www.xbmc-kodi.cz/prispevek-apple-tv-ivysilani-pro-tvos a mohu nějaké uživatele přidat do TestFlightu.
+Případně poslat soukromou zprávu na fórum http://www.xbmc-kodi.cz/prispevek-apple-tv-ivysilani-pro-tvos a pokud budu moct, přidám do TestFlightu.
 
 <hr /> 
 
