@@ -11,6 +11,22 @@ Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
 <img src="http://marhycz.github.io/ivysilani_tvOS/img/dates.jpg" width="400">
 <img src="http://marhycz.github.io/ivysilani_tvOS/img/date.jpg" width="400">
 
+### Jak tedy aplikaci spustit?
+Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
+
+Javascriptovou část aplikace hostuji zde na githubu v gh-pages branch, tedy při případném updatu postačí vypnout/zapnout aplikaci na Apple TV.
+
+Případně poslat PM na fóru http://www.xbmc-kodi.cz/prispevek-apple-tv-ivysilani-pro-tvos a mohu nějaké uživatele přidat do TestFlightu.
+
+<hr /> 
+
+### Struktura
+Projekt je rozdělený do 2 částí
+
+- native: tato složka obsahuje Xcode projekt. Soubor AppDelegate.swift se stará o nastavení TVMLKit frameworku a spuštění JavaScriptové aplikace. Nativní část se měnit nebude, výhoda pro uživatele je tedy, že aplikaci bude muset zkompilovat jen jednou.
+
+- web: tato složka obsahuje JavaScript a TVML zdrojové soubory potřebné pro kompilaci aplikace. Obsah složky web/public by měl běžet na webovém serveru, na který bude mít aplikace přístup.
+
 ### Jak začít s vývojem
 
 Pokud máte nainstalovnaný [nodejs](https://nodejs.org/) a [npm](https://www.npmjs.com/) stačí následující příkazy ve složce s projektem:
@@ -27,13 +43,3 @@ Zkompiluje .js aplikaci a spustí výchozí webserver na portu 9001. Server hlí
 $ npm start
 ```
 
-### Struktura
-Projekt je rozdělený do 2 částí
-
-- native: tato složka obsahuje Xcode projekt. Soubor AppDelegate.swift se stará o nastavení TVMLKit frameworku and spuštění JavaScriptové aplikace.
-- web: tato složka obsahuje JavaScript a TVML zdrojové soubory potřebné pro kompilaci aplikace. Obsah složky web/public by měl běžet na webovém serveru, na který bude mít aplikace přístup.
-
-### Jak tedy aplikaci spustit?
-Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
-
-Javascriptovou část aplikace hostuji zde na githubu v gh-pages branch, tedy při případném updatu stačí vypnout/zapnout aplikaci na Apple TV.
