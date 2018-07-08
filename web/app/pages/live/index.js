@@ -39,7 +39,10 @@ const LivePage = ATV.Page.create({
         channels.channel4.channelLogo = 'img/channels/ctsport.lcr'
 
         Object.entries(channels).forEach(([key, value]) => {
-          if (value.live.programme.channelTitle === '') { value.live.programme.title = 'Nyní nevysílá online' }
+          if (value.live.programme.channelTitle === '') {
+            value.live.programme.title = 'Nyní nevysílá online'
+            value.live.programme.imageURL = `${ATV.launchOptions.BASEURL}assets/img/offline.jpg`
+          }
         })
 
         resolve({
