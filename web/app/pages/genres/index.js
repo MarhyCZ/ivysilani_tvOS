@@ -6,7 +6,6 @@ import API from 'lib/ivysilani.js'
 
 const GenresPage = ATV.Page.create({
   name: 'genres',
-  // url: API.discoverMovies,
   data () {
     return {results: API.genresList()}
   },

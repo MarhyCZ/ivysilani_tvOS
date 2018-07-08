@@ -6,7 +6,6 @@ import API from 'lib/ivysilani.js'
 
 const DatesPage = ATV.Page.create({
   name: 'dates',
-  // url: API.discoverMovies,
   data () {
     return {results: API.get.datesList}
   },

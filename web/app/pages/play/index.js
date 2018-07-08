@@ -15,6 +15,8 @@ const PlayPage = ATV.Page.create({
     u progressive je potreba kvalita 'max1080p', ktera vybere konkretni stream, namisto celeho m3u8 playlistu
     max1080p zajistuje, ze pro videa s rozlisenim mensi nez 1080p, se automaticky vybere mensi kvalita a nedojde k chybe
 
+    Update: po změně providera CDN už není potřeba user-agent, request funguje i bez toho
+
     // Zkontroluj, jestli se jedná o live show a neni to Video on Demand. Tam se bude jednat o string, protoze fastXmlParser konverze.
     // && (options.isVod === "")
 

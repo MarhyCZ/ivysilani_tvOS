@@ -2,18 +2,9 @@ import ATV from 'atvjs'
 import Handlebars from 'handlebars'
 
 const _ = ATV._
-const imageBaseUrl = 'http://imgct.ceskatelevize.cz/cache/w1280/upload/'
 
 function assetUrl (name) {
   return `${ATV.launchOptions.BASEURL}assets/${name}`
-}
-
-// deprecated
-function programmeImage (showId, programmeId) {
-  if (typeof programmeId === 'object') {
-    return `${imageBaseUrl}program/porady/${showId}/foto/uni.jpg?`
-  }
-  return `${imageBaseUrl}program/porady/${showId}/foto/uni_${programmeId}.jpg?`
 }
 
 const helpers = {
@@ -28,10 +19,6 @@ const helpers = {
   },
   asset_url (asset) {
     return new Handlebars.SafeString(assetUrl(asset))
-  },
-  programmeImg (showId, programmeId) {
-    return new Handlebars.SafeString(programmeImage(showId, programmeId))
-    // pouzijes to pak jako: {{{programmeImg ID}}}
   },
   fullImageURL (imageURL) {
     return new Handlebars.SafeString(imageURL)

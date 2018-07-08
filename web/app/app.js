@@ -40,7 +40,8 @@ ATV.start({
     }, {
       id: 'dates',
       name: 'Podle data',
-      page: DatesPage
+      page: DatesPage,
+      attributes: {reloadOnSelect: true}
     }, /*, {            id: 'genres',
             name: 'Podle žánru',
             page: GenresPage

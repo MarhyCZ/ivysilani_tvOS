@@ -6,12 +6,10 @@ const _ = ATV._ // lodash
 
 // import qs from 'qs';
 
-const BASE_GET_URL = 'http://ivysilani.marstad.cz/api/'
 const BASE_XML_URL = 'https://www.ceskatelevize.cz'
-const BASE_XML_PROXY = 'https://www.ceskatelevize.cz'
 const TOKEN_URL = `${BASE_XML_URL}/services/ivysilani/xml/token/`
+const IMAGE_WIDTH = 1280
 
-const makeParams = params => (params ? `?${Object.keys(params).map(key => ([key, params[key]].map(encodeURIComponent).join('='))).join('&')}` : '')
 const toQueryString = obj => (
   _.map(obj, (v, k) => {
     if (_.isArray(v)) {
@@ -20,11 +18,6 @@ const toQueryString = obj => (
     return `${encodeURIComponent(k)}=${encodeURIComponent(v)}`
   })
 ).join('&')
-
-function buildUrl (url, params) {
-//    console.log(baseUrl + url + qs.stringify(params));
-  return BASE_GET_URL + url + makeParams(params)
-}
 
 const makeToken = () => {
   const params = 'user=iDevicesMotion'
@@ -45,7 +38,7 @@ const makeToken = () => {
 const xhrOptions = (params) => {
   const baseParams = {
     token: makeToken(),
-    imageType: 1280
+    imageType: IMAGE_WIDTH
   }
   console.log(`${toQueryString(baseParams)}&${toQueryString(params)}`)
   return {
@@ -55,12 +48,6 @@ const xhrOptions = (params) => {
     },
     responseType: 'text'
   }
-}
-
-const resizeImgUrl = (object) => {
-  let stringified = JSON.stringify(object)
-  stringified = stringified.replace(/(imgct.ceskatelevize.cz\/cache\/w)([0-9]*)/gm, 'imgct.ceskatelevize.cz/cache/w1280')
-  return JSON.parse(stringified)
 }
 
 const generateDates = () => {
@@ -94,7 +81,7 @@ const syncAjax = (url, options) => {
 const url = {
   // URLS Generators
   get programmeList () {
-    return `${BASE_XML_PROXY}/services/ivysilani/xml/programmelist/`
+    return `${BASE_XML_URL}/services/ivysilani/xml/programmelist/`
   },
   get programmeDetails () {
     return `${BASE_XML_URL}/services/ivysilani/xml/programmedetail/`
@@ -102,18 +89,12 @@ const url = {
   get playlist () {
     return `${BASE_XML_URL}/services/ivysilani/xml/playlisturl/`
   },
-  videoUrl (params) {
-    return buildUrl('modules/videoplayer-v2/services/videodetail.php', params)
-  },
   get timeshift () {
     return `${BASE_XML_URL}/services/ivysilani/xml/timeshifturl`
   }
 }
 
 const get = {
-  get token () {
-    return makeToken()
-  },
   get alphabetList () {
     return staticData.alphabet
   },
@@ -133,36 +114,13 @@ const get = {
     return name
   },
   get imageWidth () {
-    return 1280
-  }
-}
-
-const apis = {
-
-  // URLS Generators
-  listTips (type) {
-    return buildUrl(`ivysilani/services/tips.php?type=${type}`)
-  },
-  programmeList (params) {
-    return buildUrl('ivysilani/services/relatedp.php', params)
-  },
-  programmeDetails (id) {
-    return buildUrl(`modules/videoplayer-v2/services/programmedetail.php?id=${id}`)
-  },
-  relatedList (id) {
-    return buildUrl(`ivysilani/services/related.php?id=${id}`)
-  },
-  liveList () {
-    return buildUrl('ivysilani/services/live.php')
+    return IMAGE_WIDTH
   }
 }
 
 export default {
-  makeToken,
   xhrOptions,
-  resizeImgUrl,
   syncAjax,
   url,
-  get,
-  apis
+  get
 }
