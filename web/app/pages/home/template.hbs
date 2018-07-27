@@ -1,8 +1,8 @@
 <document>
     <stackTemplate>
-        <banner>
+        <identityBanner>
             <badge src="{{{asset_url 'img/ivysilani.png'}}}" class="appLogo" />
-        </banner>
+        </identityBanner>
         <collectionList>
             <carousel>
                 <section>
@@ -54,6 +54,17 @@
                 <header><title>Z našeho archivu</title></header>
                 <section>
                     {{#each tipsArchive }}
+                        <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                            <img class="tile" src="{{ fullImageURL imageURL }}"/>
+                            <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                        </lockup>
+                    {{/each}}
+                </section>
+            </shelf>
+            <shelf>
+                <header><title>Ostatní právě sledují</title></header>
+                <section>
+                    {{#each tipsWatching }}
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
                             <img class="tile" src="{{ fullImageURL imageURL }}"/>
                             <title class="showAndScrollTextOnHighlight">{{ title }}</title>

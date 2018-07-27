@@ -2,7 +2,7 @@ export const alphabet = [
   { title: 'A', link: 'a', poster_path: 'img/alphabet/a.lcr' },
   { title: 'B', link: 'b', poster_path: 'img/alphabet/b.lcr' },
   { title: 'C', link: 'c', poster_path: 'img/alphabet/c.lcr' },
-  { title: 'Č', link: '%C4%8D', poster_path: 'img/alphabet/%C4%8D.lcr' },
+  { title: 'Č', link: 'č', poster_path: 'img/alphabet/%C4%8D.lcr' },
   { title: 'D', link: 'd', poster_path: 'img/alphabet/d.lcr' },
   { title: 'E', link: 'e', poster_path: 'img/alphabet/e.lcr' },
   { title: 'F', link: 'f', poster_path: 'img/alphabet/f.lcr' },
@@ -19,9 +19,9 @@ export const alphabet = [
   { title: 'P', link: 'p', poster_path: 'img/alphabet/p.lcr' },
   { title: 'Q', link: 'q', poster_path: 'img/alphabet/q.lcr' },
   { title: 'R', link: 'r', poster_path: 'img/alphabet/r.lcr' },
-  { title: 'Ř', link: '%C5%99', poster_path: 'img/alphabet/%C5%99.lcr' },
+  { title: 'Ř', link: 'ř', poster_path: 'img/alphabet/%C5%99.lcr' },
   { title: 'S', link: 's', poster_path: 'img/alphabet/s.lcr' },
-  { title: 'Š', link: '%C5%A1', poster_path: 'img/alphabet/%C5%A1.lcr' },
+  { title: 'Š', link: 'š', poster_path: 'img/alphabet/%C5%A1.lcr' },
   { title: 'T', link: 't', poster_path: 'img/alphabet/t.lcr' },
   { title: 'U', link: 'u', poster_path: 'img/alphabet/u.lcr' },
   { title: 'V', link: 'v', poster_path: 'img/alphabet/v.lcr' },
@@ -29,7 +29,7 @@ export const alphabet = [
   { title: 'X', link: 'x', poster_path: 'img/alphabet/x.lcr' },
   { title: 'Y', link: 'y', poster_path: 'img/alphabet/y.lcr' },
   { title: 'Z', link: 'z', poster_path: 'img/alphabet/z.lcr' },
-  { title: 'Ž', link: '%C5%BE', poster_path: 'img/alphabet/%C5%BE.lcr' },
+  { title: 'Ž', link: 'ž', poster_path: 'img/alphabet/%C5%BE.lcr' },
   { title: 'Ostatní', link: '!', poster_path: 'img/alphabet/ostatni.lcr' }
 ]
 
