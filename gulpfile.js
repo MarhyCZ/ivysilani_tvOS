@@ -30,6 +30,7 @@ gulp.task('serve', function () {
   $.connect.server({
     root: dist,
     port: port,
+    host: "0.0.0.0",
     livereload: {
       port: 35728
     }
