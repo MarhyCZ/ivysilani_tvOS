@@ -32,7 +32,7 @@ const HomePage = ATV.Page.create({
           tipsWeek: tipsWeek.programme,
           tipsNote: tipsNote.programme,
           tipsArchive: tipsArchive.programme,
-          tipsWatching: tipsWatching,
+          tipsWatching: tipsWatching.programme,
           letters: API.get.alphabetList,
           genres: API.get.genresList
         })
