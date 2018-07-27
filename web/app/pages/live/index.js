@@ -15,8 +15,8 @@ const LivePage = ATV.Page.create({
     Promise
       .all([getLiveChannels])
       .then((xhrs) => {
-        // Modifikace kanálů
         let channels = fastXmlParser.parse(xhrs[0].response).programmes
+        // Modifikace kanálů
         console.log(channels)
         channels.channel1.tintColor = '#ff0000'
         channels.channel1.channelLogo = 'img/channels/ct1.lcr'
@@ -41,7 +41,7 @@ const LivePage = ATV.Page.create({
         Object.entries(channels).forEach(([key, value]) => {
           if (value.live.programme.channelTitle === '') {
             value.live.programme.title = 'Nyní nevysílá online'
-            value.live.programme.imageURL = `${ATV.launchOptions.BASEURL}assets/img/offline.jpg`
+            value.live.programme.imageURL = `${ATV.launchOptions.BASEURL}assets/img/channels/offline.jpg`
           }
         })
 

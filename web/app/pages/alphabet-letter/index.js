@@ -25,6 +25,7 @@ const AlphabetLetterPage = ATV.Page.create({
     }
 
     let getShows = ATV.Ajax.post(API.url.programmeList, API.xhrOptions({letter: options.link}))
+
     // Then resolve them at once
     Promise
       .all([getShows])

@@ -6,7 +6,6 @@ import API from 'lib/ivysilani.js'
 
 const AlphabetPage = ATV.Page.create({
   name: 'alphabet',
-  // url: API.discoverMovies,
   data () {
     return { results: API.get.alphabetList }
   },
