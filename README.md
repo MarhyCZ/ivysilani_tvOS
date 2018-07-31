@@ -1,12 +1,11 @@
-<a href="https://koding.com/"> <img src="https://koding-cdn.s3.amazonaws.com/badges/made-with-koding/v1/koding_badge_ReadmeDark.png" srcset="https://koding-cdn.s3.amazonaws.com/badges/made-with-koding/v1/koding_badge_ReadmeDark.png 1x, https://koding-cdn.s3.amazonaws.com/badges/made-with-koding/v1/koding_badge_ReadmeDark@2x.png 2x" alt="Made with Koding" /> </a>
-
 # iVysílání pro tvOS
-Neoficiální klient iVysílání pro Apple TV umožňující sledování videoobsahu veřejnoprávní České televize. Postaven s použitím TVML a [atvjs](https://github.com/emadalam/atvjs) frameworku.
+Neoficiální klient iVysílání pro Apple TV umožňující sledování videoobsahu veřejnoprávní České televize s využitím jejich oficiálního API. Postaven s použitím TVML a [atvjs](https://github.com/emadalam/atvjs) frameworku.
 
 Problémy hlašte v Issues.
 
 Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
-<img src="http://marhycz.github.io/ivysilani_tvOS/img/homescreen.jpg" width="400"><img src="http://marhycz.github.io/ivysilani_tvOS/img/livechannels.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/homescreen.jpg" width="400">
+<img src="http://marhycz.github.io/ivysilani_tvOS/img/livechannels.jpg" width="400">
 <img src="http://marhycz.github.io/ivysilani_tvOS/img/letter.jpg" width="400">
 <img src="http://marhycz.github.io/ivysilani_tvOS/img/episodes.jpg" width="400">
 <img src="http://marhycz.github.io/ivysilani_tvOS/img/episodeinfo.jpg" width="400">
@@ -17,8 +16,6 @@ Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
 Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
 
 Javascriptovou část aplikace hostuji zde na githubu v gh-pages branch, tedy při případném updatu postačí vypnout/zapnout aplikaci na Apple TV.
-
-Případně poslat soukromou zprávu na fórum http://www.xbmc-kodi.cz/prispevek-apple-tv-ivysilani-pro-tvos a pokud budu moct, přidám do TestFlightu.
 
 <hr /> 
 
