@@ -1,6 +1,8 @@
 # iVysílání pro tvOS
 Neoficiální klient iVysílání pro Apple TV umožňující sledování videoobsahu veřejnoprávní České televize s využitím jejich oficiálního API. Postaven s použitím TVML a [atvjs](https://github.com/emadalam/atvjs) frameworku.
 
+Byl bych velice rád, pokud by ČT chtěla aplikaci převzít a udělat z ní aplikaci dostupnou z App Store. Rád bych pomohl všemi silami. Celý kód je zde k dispozici. Proto kdokoliv, komu se tento prototyp líbí, napište na info@ceskatelevize.cz s prosbou, že máte zájem o aplikaci pro Apple TV platformu a klidně přiložte odkaz na tento GitHubový projekt.
+
 Problémy hlašte v Issues.
 
 Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
