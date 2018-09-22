@@ -28,22 +28,22 @@
   },
   "homepage": "https://github.com/marhycz/ivysilani_tvOS#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.2",
     "del": "^3.0.0",
-    "eslint": "^5.2.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.5.0",
+    "gulp-connect": "^5.6.1",
     "gulp-insert": "^0.5.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-size": "^3.0.0",
     "gulp-strip-debug": "^3.0.0",
@@ -52,13 +52,13 @@
     "gulp-watch": "^5.0.1",
     "handlebars-loader": "^1.7.0",
     "raw-loader": "^0.5.1",
-    "webpack": "^4.16.3",
-    "webpack-dev-middleware": "^3.1.3",
-    "webpack-stream": "^5.0.0"
+    "webpack": "^4.19.1",
+    "webpack-dev-middleware": "^3.3.0",
+    "webpack-stream": "^5.1.1"
   },
   "dependencies": {
     "atvjs": "^0.2.7",
-    "fast-xml-parser": "^3.11.2",
-    "handlebars": "^4.0.11"
+    "fast-xml-parser": "^3.12.5",
+    "handlebars": "^4.0.12"
   }
 }
