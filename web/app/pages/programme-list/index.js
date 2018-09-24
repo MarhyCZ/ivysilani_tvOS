@@ -3,6 +3,9 @@ import fastXmlParser from 'fast-xml-parser'
 
 import template from './template.hbs'
 import API from 'lib/ivysilani.js'
+import favorites from 'lib/favorites.js'
+
+let showInfo
 
 var AlphabetLetterPage = ATV.Page.create({
   name: 'programme-list',
@@ -11,7 +14,6 @@ var AlphabetLetterPage = ATV.Page.create({
     // ATV.Navigation.showLoading({data : {message: 'Načítání'}});
     // Paging support
     let currentPage
-    let showInfo
     let pageSize = 20
     if ('paging' in options) { currentPage = options.paging.nextPage } else { currentPage = '1' }
     if ('showInfo' in options) { showInfo = options.showInfo } else { showInfo = options }
@@ -47,7 +49,12 @@ var AlphabetLetterPage = ATV.Page.create({
         // Kvuli konverzti XML -> JSON. fastXMLParser hodí jednu epizodu jako child, ne jako pole
         if (!(programmeList.episodes.programme.constructor === Array)) { programmeList.episodes.programme = [programmeList.episodes.programme] }
 
+        // Pokud se pořad nachází v oblíbených, uprav vzhled tlačítka
+        let ratedState
+        if (favorites.isFav(showInfo.ID)) { ratedState = 'resource://button-rated' } else { ratedState = 'resource://button-rate' }
+
         resolve({
+          ratedState: ratedState,
           showInfo: showInfo,
           paging: programmeList.episodes.paging,
           episodes: programmeList.episodes.programme
@@ -56,8 +63,24 @@ var AlphabetLetterPage = ATV.Page.create({
         // error
         reject()
       })
+  },
+  afterReady (doc) {
+    // Zavolá funkci, která buď přidá(true) nebo odebere(false) pořad z oblíbených
+    const changeFavorites = () => {
+      if (favorites.change(showInfo.title, showInfo.ID)) {
+        doc.getElementById('favButton').innerHTML = '<badge src="resource://button-rated" />'
+      } else {
+        doc.getElementById('favButton').innerHTML = '<badge src="resource://button-rate" />'
+      }
+    }
 
-    /*
+    // Naslouchání stisknutí tlačítka
+    doc
+      .getElementById('favButton')
+      .addEventListener('select', changeFavorites)
+  }
+})
+/*
         // get the unique id of the asset
         let letterLink = options.link;
 
@@ -78,7 +101,5 @@ var AlphabetLetterPage = ATV.Page.create({
         // for demo using static content
 //      resolve(staticData());
         */
-  }
-})
 
 export default AlphabetLetterPage

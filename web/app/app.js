@@ -16,6 +16,7 @@ import HomePage from 'pages/home'
 import AlphabetPage from 'pages/alphabet'
 import DatesPage from 'pages/dates'
 import GenresPage from 'pages/genres'
+import FavoritesPage from 'pages/favorites'
 import LivePage from 'pages/live'
 
 import AlphabetLetterPage from 'pages/alphabet-letter'
@@ -32,7 +33,7 @@ ATV.start({
       id: 'home',
       name: 'Výběry',
       page: HomePage,
-      attributes: {autoHighlight: true, reloadOnSelect: true}
+      attributes: { autoHighlight: true, reloadOnSelect: true }
     }, {
       id: 'alphabet',
       name: 'Podle abecedy',
@@ -41,16 +42,22 @@ ATV.start({
       id: 'dates',
       name: 'Podle data',
       page: DatesPage,
-      attributes: {reloadOnSelect: true}
+      attributes: { reloadOnSelect: true }
     }, /*, {            id: 'genres',
             name: 'Podle žánru',
             page: GenresPage
         } */
     {
+      id: 'favorites',
+      name: 'Oblíbené',
+      page: FavoritesPage,
+      attributes: { reloadOnSelect: true }
+    },
+    {
       id: 'live',
       name: 'Živé vysílání',
       page: LivePage,
-      attributes: {reloadOnSelect: true}
+      attributes: { reloadOnSelect: true }
     }]
   },
   templates: {
@@ -79,7 +86,7 @@ ATV.start({
     ATV.Navigation.navigateToMenuPage()
   },
   onResume (options) {
-    //ATV.Navigation.clear()
-    //ATV.Navigation.navigateToMenuPage()
+    // ATV.Navigation.clear()
+    // ATV.Navigation.navigateToMenuPage()
   }
 })

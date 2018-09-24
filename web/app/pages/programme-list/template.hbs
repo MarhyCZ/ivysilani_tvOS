@@ -1,39 +1,42 @@
 <document>
     <listTemplate theme="dark">
         <background>
-            <heroImg src="{{fullImageURL showInfo.imageURL}}"/>
+            <heroImg src="{{fullImageURL showInfo.imageURL}}" />
         </background>
         <banner>
             <title>{{ showInfo.title }}</title>
+            <buttonLockup id="favButton" style="tv-position: right;margin-left: 100">
+                <badge src="{{ ratedState }}" />
+            </buttonLockup>
         </banner>
         <list>
-            <header>
+            <!-- <header>
                 <title>Epizody</title>
-            </header>
+            </header> -->
             <section>
                 {{#each episodes }}
-                    <listItemLockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
-                        <title>{{ title }}</title>
-                        <relatedContent>
-                            <lockup>
-                                <img src="{{ fullImageURL imageURL }}"/>
-                                <title>{{ title }}</title>
-                                <description>{{ synopsis }}</description>
-                            </lockup>
-                        </relatedContent>
-                    </listItemLockup>
+                <listItemLockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
+                    <title>{{ title }}</title>
+                    <relatedContent>
+                        <lockup>
+                            <img src="{{ fullImageURL imageURL }}" />
+                            <title>{{ title }}</title>
+                            <description>{{ synopsis }}</description>
+                        </lockup>
+                    </relatedContent>
+                </listItemLockup>
                 {{/each}}
                 {{#if paging }}
-                    <listItemLockup data-href-page="programme-list" data-href-page-options="{{ toJSON this }}">
-                        <title>Další</title>
-                        <relatedContent>
-                            <lockup>
-                                <img src=""/>
-                                <title>Další</title>
-                                <description></description>
-                            </lockup>
-                        </relatedContent>
-                    </listItemLockup>
+                <listItemLockup data-href-page="programme-list" data-href-page-options="{{ toJSON this }}">
+                    <title>Další</title>
+                    <relatedContent>
+                        <lockup>
+                            <img src="" />
+                            <title>Další</title>
+                            <description></description>
+                        </lockup>
+                    </relatedContent>
+                </listItemLockup>
                 {{/if}}
             </section>
         </list>
