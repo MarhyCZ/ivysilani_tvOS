@@ -1,10 +1,12 @@
 # iVysílání pro tvOS
 Neoficiální klient iVysílání pro Apple TV umožňující sledování videoobsahu veřejnoprávní České televize. Postaven s použitím TVML a [atvjs](https://github.com/emadalam/atvjs) frameworku.
 
+Byl bych velice rád, pokud by ČT chtěla aplikaci převzít a udělat z ní aplikaci dostupnou z App Store. Rád bych pomohl všemi silami. Celý kód je zde k dispozici. Proto kdokoliv, komu se tento prototyp líbí, napište na info@ceskatelevize.cz s prosbou, že máte zájem o aplikaci pro Apple TV platformu a klidně přiložte odkaz na tento GitHubový projekt.
+
 Problémy hlašte v Issues.
 
 Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
-<img src="docs/img/homescreen.jpg" width="400"><img src="docs/img/homescreendark.jpg" width="400">
+<img src="docs/img/homescreen.jpg" width="400"> <img src="docs/img/homescreendark.jpg" width="400">
 <img src="docs/img/livechannels.jpg" width="400">
 <img src="docs/img/letter.jpg" width="400">
 <img src="docs/img/episodes.jpg" width="400">
@@ -13,8 +15,7 @@ Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
 <img src="docs/img/date.jpg" width="400">
 
 #### Nově s možností přidat pořad do Oblíbených
-<img src="docs/img/favorite1.jpg" width="400">
-<img src="docs/img/favorite2.jpg" width="400">
+<img src="docs/img/favorite1.jpg" width="400"> <img src="docs/img/favorite2.jpg" width="400">
 
 ### Jak tedy aplikaci spustit?
 Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
