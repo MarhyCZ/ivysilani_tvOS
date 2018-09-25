@@ -4,17 +4,17 @@ Neoficiální klient iVysílání pro Apple TV umožňující sledování videoo
 Problémy hlašte v Issues.
 
 Ukázka aplikace na YouTube: https://youtu.be/2osctVNAr7s <br>
-<img src="img/homescreen.jpg" width="400"><img src="img/homescreendark.jpg" width="400">
-<img src="img/livechannels.jpg" width="400">
-<img src="img/letter.jpg" width="400">
-<img src="img/episodes.jpg" width="400">
-<img src="img/episodeinfo.jpg" width="400">
-<img src="img/dates.jpg" width="400">
-<img src="img/date.jpg" width="400">
+<img src="docs/img/homescreen.jpg" width="400"><img src="img/homescreendark.jpg" width="400">
+<img src="docs/img/livechannels.jpg" width="400">
+<img src="docs/img/letter.jpg" width="400">
+<img src="docs/img/episodes.jpg" width="400">
+<img src="docs/img/episodeinfo.jpg" width="400">
+<img src="docs/img/dates.jpg" width="400">
+<img src="docs/img/date.jpg" width="400">
 
 Nově s možností přidat pořad do Oblíbených
-<img src="img/favorite1.jpg" width="400">
-<img src="img/favorite2.jpg" width="400">
+<img src="docs/img/favorite1.jpg" width="400">
+<img src="docs/img/favorite2.jpg" width="400">
 
 ### Jak tedy aplikaci spustit?
 Stačí zkompilovat projekt ve složce native v Xcode a poslat na Apple TV.
