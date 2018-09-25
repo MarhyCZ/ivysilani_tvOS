@@ -1,0 +1,53 @@
+.appLogo {
+    width:290; 
+    height:60;
+    tv-align: center;
+}
+
+@media tv-template and (tv-theme:dark) {
+    .appLogo {
+        tv-tint-color: #fff;
+    }
+ }
+
+.scrollTextOnHighlight {
+    tv-text-highlight-style: marquee-on-highlight;
+}
+.showAndScrollTextOnHighlight {
+    tv-text-highlight-style: marquee-and-show-on-highlight;
+}
+.tile {
+    width: 400;
+    height: 225;
+}
+.tile_compact {
+    width: 250;
+    height: 376;
+}
+.tile_large {
+    width: 334;
+    height: 501;
+}
+
+.darkBackgroundColor {
+    background-color: rgba(7, 20, 35, 0.8);
+}
+.black {
+    background-color: rgb(0, 0, 0);
+}
+
+.darkImage {
+    tv-tint-color: linear-gradient(top, 0.2, transparent, 0.5, rgba(0, 0, 0, 0.4), 1.00, rgba(0, 0, 0, 0.9));
+}
+/*
+@media -tv-template and (-tv-uber) {
+tv-tint-color: linear-gradient(top, 0.20, transparent, 0.55, rgba(0,0,0,0.35), 1.00, rgba(0,0,0,0.5));
+background-color: #091a2a;
+background-color: rgba(10, 31, 65, 0.8);
+background-color: rgba(9, 26, 42, 0.7);
+background-color: rgba(33, 34, 37, 0.8);
+    background-color: rgba(9, 26, 42, 0.5);
+    .darkBackgroundColor {
+        background-color: rgba(4, 27, 97, 0.5);
+    }
+} */
