@@ -4,6 +4,8 @@ import fastXmlParser from 'fast-xml-parser'
 import template from './template.hbs'
 import API from 'lib/ivysilani.js'
 
+import errorTpl from 'shared/templates/error.hbs'
+
 const FavoritesPage = ATV.Page.create({
   name: 'favorites',
   template,
@@ -51,4 +53,25 @@ const FavoritesPage = ATV.Page.create({
   }
 })
 
-export default FavoritesPage
+const EmptyPage = ATV.Page.create({
+  name: 'favorites',
+  template: errorTpl,
+  data: {
+    title: 'Žádné oblíbené pořady',
+    message: 'Zkuste nějaké přidat při procházení'
+  },
+  type: 'document'
+  // makeDom(cfg, response)
+})
+
+const Decision = () => {
+  let favorites = ATV.Settings.get('favorites')
+  console.log(favorites)
+  if (favorites === undefined || ATV._.isEmpty(favorites)) {
+    return EmptyPage()
+  } else {
+    return FavoritesPage()
+  }
+}
+
+export default Decision
