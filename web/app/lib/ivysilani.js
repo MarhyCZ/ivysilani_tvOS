@@ -59,7 +59,7 @@ const generateDates = () => {
     const mm = date.getMonth() + 1 // January is 0!
     const yyyy = date.getFullYear()
     data.push({
-      date: `${yyyy}-${mm + 1 < 10 ? (`0${mm}`) : mm}-${dd + 1 < 10 ? (`0${dd}`) : dd}`,
+      date: `${yyyy}-${mm < 10 ? (`0${mm}`) : mm}-${dd + 1 < 10 ? (`0${dd}`) : dd}`,
       title: `${dd}.${mm}.${yyyy}`,
       poster_path: `img/dates/${dd}.lcr`
     })
