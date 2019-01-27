@@ -2,6 +2,7 @@ var gulp = require('gulp')
 var path = require('path')
 var del = require('del')
 var env = require('minimist')(process.argv.slice(2))
+var through2 = require('through2')
 var $ = require('gulp-load-plugins')({
   pattern: '*'
 })
@@ -24,8 +25,8 @@ gulp.task('clean', function (cb) {
 gulp.task('scripts', function () {
   return gulp.src(webpackConfig.entry.app)
     .pipe($.webpackStream(webpackConfig))
-    .pipe(isProduction ? $.uglify({preserveComments: 'license'}) : $.util.noop())
-    .pipe(isProduction ? $.stripDebug() : $.util.noop())
+    .pipe(isProduction ? $.uglify({preserveComments: 'license'}) : through2.obj())
+    .pipe(isProduction ? $.stripDebug() : through2.obj())
     .pipe(gulp.dest(dist))
     .pipe($.size({
       title: 'js'
@@ -45,7 +46,7 @@ gulp.task('serve', function () {
   $.connect.server({
     root: dist,
     port: port,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     livereload: {
       port: 35728
     }
@@ -63,8 +64,8 @@ gulp.task('watch', function watch () {
 var defaultTasks = ['static', 'scripts']
 
 // waits until clean is finished then builds the project
-gulp.task('build', gulp.series('clean'), function () {
-  gulp.start(defaultTasks)
+gulp.task('build', gulp.series('clean', gulp.parallel('static', 'scripts')), function () {
+
 })
 
 // by default build project and then watch files
