@@ -4,7 +4,7 @@
   "description": "Neoficiální klient iVysílání pro Apple TV s použitím atvjs",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp -t production"
   },
   "repository": {
     "type": "git",

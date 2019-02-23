@@ -41,6 +41,7 @@ module.exports.development = {
 }
 
 module.exports.production = {
+  mode: 'production',
   entry: entry,
   output: output,
   resolve: {

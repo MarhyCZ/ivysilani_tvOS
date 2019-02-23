@@ -25,7 +25,7 @@ gulp.task('clean', function (cb) {
 gulp.task('scripts', function () {
   return gulp.src(webpackConfig.entry.app)
     .pipe($.webpackStream(webpackConfig))
-    .pipe(isProduction ? $.uglify({preserveComments: 'license'}) : through2.obj())
+    // .pipe(isProduction ? $.uglify() : through2.obj())
     .pipe(isProduction ? $.stripDebug() : through2.obj())
     .pipe(gulp.dest(dist))
     .pipe($.size({
