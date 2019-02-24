@@ -1,10 +1,22 @@
 {
-    "extends": "standard",
-    "globals": {
-        "XMLHttpRequest": true,
-        "MediaItem": true,
-        "Playlist": true,
-        "Player": true,
-        "navigationDocument": true
+  "env": {
+      "browser": true,
+      "es6": true
+  },
+  "extends": "standard",
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly",
+      "XMLHttpRequest": true,
+      "MediaItem": true,
+      "Playlist": true,
+      "Player": true,
+      "navigationDocument": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "rules": {
   }
 }

@@ -4,7 +4,10 @@
   "description": "Neoficiální klient iVysílání pro Apple TV s použitím atvjs",
   "main": "index.js",
   "scripts": {
-    "start": "gulp -t production"
+    "install-deps": "npx yarn@$npm_package_engines_yarn install --frozen-lockfile --check-files",
+    "build": "webpack --progress",
+    "serve": "webpack-dev-server",
+    "dist": "NODE_ENV=production webpack --progress"
   },
   "repository": {
     "type": "git",
@@ -30,31 +33,18 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "babel-loader": "^8.0.5",
-    "del": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.0",
     "eslint": "^5.13.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-insert": "^0.5.0",
-    "gulp-livereload": "^4.0.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-size": "^3.0.0",
-    "gulp-strip-debug": "^3.0.0",
-    "gulp-uglify": "^3.0.1",
-    "gulp-watch": "^5.0.1",
     "handlebars-loader": "^1.7.1",
-    "minimist": "^1.2.0",
     "raw-loader": "^1.0.0",
-    "through2": "^3.0.0",
     "webpack": "^4.29.3",
-    "webpack-dev-middleware": "^3.5.2",
-    "webpack-stream": "^5.2.1"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
   },
   "dependencies": {
     "atvjs": "^0.2.7",

@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-      "target": "es6"
+      "target": "es2018",
+      "baseUrl": "web/app/"
   },
-  "exclude": [
-      "node_modules"
+  "include": [
+      "web/app/**/*",
   ]
 }
