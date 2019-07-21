@@ -30,25 +30,25 @@
   },
   "homepage": "https://github.com/marhycz/ivysilani_tvOS#readme",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "babel-loader": "^8.0.5",
-    "copy-webpack-plugin": "^5.0.0",
-    "eslint": "^5.13.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.3",
+    "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "handlebars-loader": "^1.7.1",
-    "raw-loader": "^1.0.0",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.0"
+    "raw-loader": "^3.0.0",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "atvjs": "^0.2.7",
-    "fast-xml-parser": "^3.12.13",
-    "handlebars": "^4.1.0"
+    "atvjs": "^0.2.9",
+    "fast-xml-parser": "^3.12.16",
+    "handlebars": "^4.1.2"
   }
 }
