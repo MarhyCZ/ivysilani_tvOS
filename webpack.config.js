@@ -23,13 +23,13 @@ const stats = {
 }
 
 module.exports = {
-  devtool: isProd ? '' : 'eval-source-map',
+  devtool: isProd ? 'source-map' : 'eval-source-map',
   mode: isProd ? 'production' : 'development',
   entry: entry,
   output: output,
   resolve: {
     alias: {
-      'handlebars': 'handlebars/runtime.js'
+      handlebars: 'handlebars/runtime.js'
     },
     modules: [srcRoot, 'node_modules']
   },

@@ -1,8 +1,5 @@
 <document>
     <stackTemplate>
-        <identityBanner>
-            <badge src="{{{asset_url 'img/ivysilani.png'}}}" class="appLogo" />
-        </identityBanner>
         <collectionList>
             <carousel>
                 <section>
@@ -10,7 +7,7 @@
                         <lockup data-href-page="programme-details" data-href-page-options="{{toJSON this }}">
                             <img src="{{ fullImageURL imageURL }}" class="darkImage" style="width:768; height:432;" />
                             <overlay>
-                                <title class="showAndScrollTextOnHighlight">{{ title }}</title>
+                                <title class="">{{ title }}</title>
                                 <text class="overlayTextLayout"><ratingBadge value="{{ratingPercentage}}"></ratingBadge></text>
                             </overlay>
                         </lockup>
