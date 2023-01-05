@@ -40,7 +40,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "handlebars-loader": "^1.7.1",
+    "handlebars-loader": "^1.7.3",
     "raw-loader": "^4.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
